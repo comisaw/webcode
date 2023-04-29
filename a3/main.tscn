@@ -1,0 +1,199 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+[ext_resource path="res://Minecraft AE(支持中文).ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://Minecraft AE(支持中文).ttf"
+
+[sub_resource type="DynamicFont" id=4]
+use_mipmaps = true
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 36
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=9]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=10]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=11]
+font_data = ExtResource( 2 )
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 5 )
+text = "Ethan and the Youth 1.0 Alpha 3"
+
+[node name="Panel2" type="Panel" parent="."]
+margin_left = 140.0
+margin_top = 146.0
+margin_right = 857.0
+margin_bottom = 474.0
+
+[node name="Button" type="Button" parent="Panel2"]
+margin_left = 258.0
+margin_top = 111.0
+margin_right = 460.0
+margin_bottom = 154.0
+custom_fonts/font = SubResource( 1 )
+text = "创建服务器"
+
+[node name="Button2" type="Button" parent="Panel2"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -100.5
+margin_top = -171.0
+margin_right = 101.5
+margin_bottom = -128.0
+custom_fonts/font = SubResource( 2 )
+text = "加入服务器"
+
+[node name="TextEdit" type="TextEdit" parent="Panel2"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -183.5
+margin_top = -124.0
+margin_right = 190.5
+margin_bottom = -97.0
+custom_fonts/font = SubResource( 4 )
+text = "ws://sb.run-us-west2.goorm.site"
+
+[node name="Label" type="Label" parent="Panel2"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -342.0
+margin_right = 342.0
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 6 )
+text = "
+Ethan and the Youth"
+align = 1
+
+[node name="Button4" type="Button" parent="Panel2"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -111.0
+margin_top = -43.0
+custom_fonts/font = SubResource( 1 )
+text = "关于"
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -476.0
+margin_top = -259.5
+margin_right = 476.0
+margin_bottom = 259.5
+rect_pivot_offset = Vector2( 305, 199.5 )
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 45.0
+margin_top = 32.5
+margin_right = 729.0
+margin_bottom = 69.5
+custom_fonts/font = SubResource( 6 )
+text = "伊桑与少年（Ethan and the Youth）"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -457.0
+margin_top = -433.0
+margin_right = 457.0
+margin_bottom = 1.0
+custom_fonts/mono_font = SubResource( 7 )
+custom_fonts/bold_italics_font = SubResource( 8 )
+custom_fonts/italics_font = SubResource( 9 )
+custom_fonts/bold_font = SubResource( 10 )
+custom_fonts/normal_font = SubResource( 11 )
+text = "作者：王韬寓（Constantaine_君士坦丁）
+邮箱：comisaw@outlook.com
+官网（Web版）：comisaw.github.io
+平台：
+	Web版：
+		当前版本：Alpha 2b（停止维护）
+		网址：comisaw.github.io
+	PC版：
+		当前版本：Alpha 3
+		下载：未开放
+	Linux/Server版：
+		当前版本：Alpha 2b
+		下载：未开放
+更新日志：
+	Alpha 3:
+		1.更新了字体，实现多语言。
+		2.用户界面变成中文。
+		3.用户界面布局优化，修复了初始地址的错误。
+		4.改变了发展方向，决定从一种聊天软件转为游戏。
+		5.改变名称，从“TELLus”转为“Ethan and the Youth”。
+		6.添加了”关于“功能。
+		7.在这个版本中，渲染方式改为OpenGL ES 3.0.
+	Alpha 2b:
+		1.改变了初始地址为。
+		2.修复了若干bug。
+		3.加入了Server版，开放了服务器。
+		P.S.这个版本是最后有Web版和Server版的版本，此后的版本都基于此Server器版开发；Web版因不兼容服务器而停止开发，但在今后的很长一段时间内仍可使用。
+	Alpha 2a（内部名称：Alpha 2）
+		1.开放了设置服务器地址的功能，并在加入服务器后仍能切换服务器。
+		2.优化了界面。
+		3.加入了Linux版。
+	Alpha 1:
+		1.命名为“TELLus\"。
+		2.实现了基础的聊天系统。
+		3.开放了Web版和PC版。
+		4.使用Godot3.5.2，用OpenGL ES 2.0渲染。
+贡献：
+	由于Ethan and the Youth是非盈利游戏所以需要广大志愿者的努力和你的捐赠。
+	志愿者：不需要
+	捐赠：不需要
+开源：
+	协议：没想好
+	开源代码：协议都没有，所以没代码
+用户协议：没必要"
+
+[node name="Button3" type="Button" parent="Panel"]
+margin_left = 904.0
+margin_top = 18.5
+margin_right = 932.0
+margin_bottom = 45.5
+text = "X"
+
+[connection signal="button_up" from="Panel2/Button" to="." method="_on_Button_button_up"]
+[connection signal="button_up" from="Panel2/Button2" to="." method="_on_Button2_button_up"]
+[connection signal="button_up" from="Panel2/Button4" to="." method="_on_Button4_button_up"]
+[connection signal="button_up" from="Panel/Button3" to="." method="_on_Button3_button_up"]
